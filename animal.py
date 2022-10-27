@@ -1,5 +1,5 @@
 class Animal:
-    def __init__(self) -> None:
+    def __init__(self):
         self.type = 0
         self.size = 0
         self.age = 0
@@ -7,8 +7,8 @@ class Animal:
 
     # I didn't put self in these because it wasn't included in the requirements of the assignment.
     # Easy fix if I'm supposed to put them in.
-    def speak():
+    def speak(self):
         pass
 
-    def describe():
+    def describe(self):
         pass
