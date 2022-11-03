@@ -15,20 +15,20 @@ class Animal:
             case ("cat", "small"):
                 return "meow"
             case ("cat", "medium"):
-                return "Meow!"
+                return "MEOW!"
             case ("cat", "large"):
-                return "Meow!"
+                return "MEOW!"
             case ("dog", "small"):
                 return "bow wow"
             case ("dog", "medium"):
                 return "Ruff ruff"
-            case ("dog", "large"):
+            case ("dog", _):
                 return "arf arf"
             case _:
                 return "how did you set invalid values?"
 
     def describe(self):
-        if self.age <= 10:
+        if self.age < 10:
             return f"{self.name} is young"
-        elif self.age > 10:
+        elif self.age >= 10:
             return f"{self.name} is old"
