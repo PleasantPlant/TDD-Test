@@ -14,9 +14,7 @@ class Animal:
         match (self.type.lower(), self.size.lower()):
             case ("cat", "small"):
                 return "meow"
-            case ("cat", "medium"):
-                return "MEOW!"
-            case ("cat", "large"):
+            case ("cat", _):
                 return "MEOW!"
             case ("dog", "small"):
                 return "bow wow"
