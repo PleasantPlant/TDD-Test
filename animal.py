@@ -11,24 +11,21 @@ class Animal:
                 self.name = "Spot"
 
     def speak(self):
-        match self.type.lower():
-            case "cat":
-                if self.size.lower() == "small":
-                    return "meow"
-                else:
-                    return "Meow!"
-            case "dog":
-                match self.size.lower():
-                    case "small":
-                        return "bow wow"
-                    case "medium":
-                        return "Ruff ruff"
-                    case "large":
-                        return "arf arf"
-                    case _:
-                        return "how did you set an invalid size?"
+        match (self.type.lower(), self.size.lower()):
+            case ("cat", "small"):
+                return "meow"
+            case ("cat", "medium"):
+                return "Meow!"
+            case ("cat", "large"):
+                return "Meow!"
+            case ("dog", "small"):
+                return "bow wow"
+            case ("dog", "medium"):
+                return "Ruff ruff"
+            case ("dog", "large"):
+                return "arf arf"
             case _:
-                return "how did you set an invalid type?"
+                return "how did you set invalid values?"
 
     def describe(self):
         if self.age <= 10:
